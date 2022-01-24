@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+body, html {
+  margin: 0;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background: hsl(225, 100%, 94%);
+  font-family: 'Red Hat Display', sans-serif;
+}
+.desktop_img {
+  width: 1440px;
+  height: 300px;
+  background-image: url("images/pattern-background-desktop.svg");
+  background-size: contain;
+  position: absolute;
+}
+.mobile_img {
+  width: 375px;
+  height: 300px;
+  background-image: url("images/pattern-background-mobile.svg");
+  background-size: contain;
+  position: absolute;
+}
+@media screen and (min-width: 100px) and (max-width: 375px) {
+  .desktop_img {
+    display: none;
+  }
+  .mobile_img {
+    display: block;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 1440px) {
+  .desktop_img {
+    display: block;
+  }
+  .mobile_img {
+    display: none;
+  }
+}
+.card {
+  margin: auto;
+  text-align: center;
+  position: relative;
+  padding-top : 50px;
+  padding-bottom: 50px;
+}
+
+.card__img {
+  margin: auto;
+  display: block;
+  height: 150px;
+  width: 300px;
+  border-radius: 20px 20px 0 0;
+}
+.card__content {
+  display: block;
+  width: 300px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  background-color: white;
+  border-radius: 0 0 20px 20px;
+}
+.card__title {
+  color: hsl(223, 47%, 23%);
+  display: block;
+  margin: 10px 0 15px 0;
+}
+.card__desc {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 15px;
+  line-height: 1.5em;
+  color: hsl(224, 23%, 55%);
+  margin-bottom: 20px;
+}
+.card__offer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: hsl(225, 100%, 98%);
+  border-radius : 10px;
+  margin-left : 20px;
+  margin-right : 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.card__plan {
+  margin-left: 0;
+  width: 100px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+.card__btn--change {
+  font-size: 12px;
+  font-weight: bold;
+}
+.card__btn--change:hover{
+  color: hsl(224, 23%, 55%);
+  text-decoration: none;
+}
+.card__btn--proceed {
+  margin : 0 auto;
+  margin-top: 20px;
+  display: block;
+  background-color: hsl(245, 75%, 52%);
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 10px;
+  width: 200px;
+  padding : 13px 30px 13px 30px;
+  box-shadow:0px 10px 34px 10px hsl(221, 22%, 80%);
+}
+.card__btn--proceed:hover {
+  background-color: hsl(224, 23%, 55%);
+}
+.card__btn--cancel {
+  margin-top: 20px;
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  color: hsl(224, 23%, 55%);
+}
+.card__btn--cancel:hover {
+  color: hsl(223, 47%, 23%);
+}
